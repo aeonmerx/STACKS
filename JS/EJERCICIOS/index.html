@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINCIPIOS DE PROGRAMACIÓN</title>
+</head>
+<body>
+
+<!--ASÍ SE ESCRIBE  PHP -->
+<?php
+echo "Esto es lenguaje de programación PHP";
+?>
+    <script>
+    // CREAR VARIABLES EN JAVASCRIPT
+    tanque = 50
+    distanciaGasolina = 480 
+    distanciaAlcohol = 300
+    </script>
+    <h3 id="titulo"></h3>
+    <script>
+        // ESCRIBIR HTML DESDE JAVASCRIPT
+    palabra = document.getElementById('titulo').innerHTML = '<h1> ¿ALCOHOL O GASOLINA? </h1>' </script>
+        Si un carro tiene un tanque de <script>document.write(tanque)</script> litros.
+         Usando gasolina y consumiendo todo el tanque se hace un recorrido de <script>document.write(distanciaAlcohol)</script> kilómetros. 
+          ¿Cuál es la eficiencia del carro usando gasolina? o sea,
+           ¿cuántos kilómetros recorre el carro  por cada litro de gasolina?
+    <script>
+        function calcular(litros,distancia){ var resultado = distancia/litros 
+            document.write(resultado)
+        }
+    </script>
+    <h6> El carro por cada litro de gasolina recorre <script>calcular(tanque,distanciaGasolina)</script> km</h6>
+  Por otro lado, 
+    si el carro usa alcohol como combustible,el mismo tanque de <script>document.write(tanque)</script>
+     litros hace un recorrido de <script>document.write(distanciaGasolina)</script> kilómetros. 
+     ¿Cuál es el la eficiencia del carro usando alcohol? 
+    <h6> El carro por cada litro de alcohol recorre <script>calcular(tanque,distanciaAlcohol);</script>km </h6>
+    <meta charset="UTF-8">
+
+<input/>
+<!--ARRAY AVANZADO-->
+<button>Verificar si acertó con el secreto</button>
+<script>
+    // FUNCIÓN QUE GENERA UN NÚMERO ALEATORIO
+	function aleatorio() {
+
+		return Math.round(Math.random()*10);
+
+	}
+
+	function sortearNumeros(cantidad) {
+		var secretos = [];
+		var contador = 1;
+		
+		while(contador<=cantidad){
+			var numeroAleatorio = aleatorio();
+			console.log(numeroAleatorio)
+			var encontrado = false;
+			// SI NÚMERO ALEATORIO ES DIFERENTE A 0 ENTONCES EJECUTAR EL FOR
+			if (numeroAleatorio != 0){
+				for (var posicion = 0; posicion < secretos.length; posicion++) {
+                    // SI EL NUMERO ALEATORIO ES IGUAL  A UN ELEMENTO DEL ARREGLO SECRETOS ROMPER FOR
+					if (numeroAleatorio == secretos[posicion]) {
+						encontrado = true;
+						break;
+					}
+				}
+				// SI ENCONTRADO  NO CAMBIA A TRUE SE AGREGA UN ELEMENTO AL ARREGLO AL CONTRARIO SE ROMPE EL FOR Y SE DEVUELVE
+				if (encontrado == false) {
+					secretos.push(numeroAleatorio);
+					contador++;
+				}
+
+			}
+			
+		
+		}	
+
+		return secretos
+
+	}
+
+// ESTAMOS EJECUTANDO LA FUNCIÓN SORTEAR NUMEROS CON ARGUMENTO 4 ANTES DE VERIFICAR SI ACERTAMOS
+	var secretos = sortearNumeros(4);
+
+	console.log(secretos)
+
+    // DESPUÉS QUE EL ARRAY ESTA COMPLETO CON SUS ELEMENTOS VERIFICAMOS SI ACERTAMOS A ALGUNO DE LOS VALORES
+    // EN ESTE EJEMPLO USAMOS UN IMPUT 
+	var input = document.querySelector("input");
+	input.focus();
+	function verificar() {
+		var encontrado = false;
+		for(var posicion = 0; posicion < secretos.length; posicion++){
+			if (parseInt(input.value) == secretos[posicion]) {
+
+				alert("Usted acertó");
+				encontrado = true;
+				break; 
+
+			}
+
+		}
+
+		if (encontrado == false) {
+
+			alert("Usted erró");
+
+		}
+				
+		input.value = "";
+		input.focus();
+
+	} 
+
+	var button = document.querySelector("button");
+    // DOM -> AL HACER CLICK EN EL BOTON SE EJECUTA VERIFICAR
+	button.onclick = verificar;
+
+
+</script>
+</body>
+</html>
