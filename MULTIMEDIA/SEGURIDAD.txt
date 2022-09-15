@@ -1,0 +1,19 @@
+APUNTES SOBRE SEGURIDAD DE LA INFORMACIÒN 29/06/2022
+Investigaciòn por Reset en muchas fuentes de la red, al final estaràn las citas bibliogràficas correspondientes a este archivo.
+VULNERABILIDADES DE LOS PUERTOS
+Cuando programamos usamos bastante el puerto 80, y a travès de el nos conectamos a bases de datos entre otros servicios..
+Hay ciertas vulnerabilidades en estos sistemas, los cuales permiten que los atacantes alteren o eliminen la informaciòn.
+Estudiaremos una persona especial que al principio utilizaba la sabidurìa de las redes como hacker y hoy en dìa es un experto que asesora a gobiernos
+en como protegerse de estos ataques..
+Esta persona es Kevin Mitnick
+4 categorías de ataques por Ingeniería Social:
++ Ataques Técnicos
++ Ataques al Ego
++ Ataques de Simpatía
++ Ataques de Intimidación
+----ATAQUES TÉCNICOS-----------
+- No existe contacto directo con las víctimas.
+- El atacante utiliza emails, páginas web, boletines.
+- El atacante simula ser una entidad reconocida y de confianza.
+- Orientado a obtener información sensible de los usuarios.
+- Altamente exitoso.
