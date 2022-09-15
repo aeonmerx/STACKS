@@ -1,0 +1,49 @@
+body{
+    background-size:8fr;
+    background-repeat:space;
+    background-color: aqua;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation-name: example; /* NOMBRE DE LA ANIMACIÒN*/
+      animation-duration: 4s;  /* DURACIÒN DE LA ANIMACIÒN */
+      animation-iteration-count: infinite;  /* NUMERO DE ITERACIONES DE LA ANIMACIÒN*/
+      animation-delay: 3s ;  /* DEMORA EN EMPEZAR LA ANIMACIÒN* SI ES NEGATIVA EJEMPLO -2 EMPIEZA LA ANIMACIÒN EN LA COORDENADA DE DOS SEGUNDOS  /
+      animation-fill-mode:both ;  /* NOMBRE DE LA ANIMACIÒN*/
+      animation-direction: reverse; /* DIRECCIÒN DE ANIMACIÒN*/
+      animation-play-state:running ;  /* ESTADO DE LA ANIMACIÒN*/
+      animation-timeline:inherit;  /* LINEA DE TIEMPO DE ANIMACIÒN*/
+      animation-timing-function: none ; /*velocidad */
+      -o-animation-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    @keyframes example {
+      0%   {background-color:red; left:0px; top:0px;}
+      25%  {background-color:yellow; left:200px; top:0px;}
+      50%  {background-color:blue; left:200px; top:200px;}
+      75%  {background-color:green; left:0px; top:200px;}
+      100% {background-color:red; left:0px; top:0px;}
+    }
+
+    .css {
+        width: 100px;
+        height: 50px;
+        background: rgb(0, 110, 255);
+        color: white;
+        font-weight: bold;
+        position: relative;
+        animation: mymove 5s infinite;
+        opacity: 0 ;
+      }
+      #div1 {animation-timing-function: linear;}
+      #div2 {animation-timing-function: ease;}
+      #div3 {animation-timing-function: ease-in;}
+      #div4 {animation-timing-function: ease-out;}
+      #div5 {animation-timing-function: ease-in-out;}
+      @keyframes mymove {
+        from {left: 0px;}
+        to {left: 300px;
+          opacity: 1 ;}
+      }

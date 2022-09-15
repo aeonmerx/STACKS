@@ -1,0 +1,99 @@
+/* ESTILOS PARA TODOS LOS ELEMENTOS HTML*/
+* {
+    text-align: center ;
+    font-family: 'Indie Flower', cursive;
+}
+/* CONTENEDOR PADRE (BODY)*/
+body {
+    padding: 2%;
+    border: 2px solid rgb(224, 187, 19);
+
+}
+/*ELEMENTOS */
+.modal-body {
+    font-size: x-large;
+}
+/* H2 ETIQUETAS NOMBRE DEL PRODUCTO* CLASE('PRODUCT') */
+.product {
+    color: white;
+}
+/* ESTILOS ENLACES O ANCLAS */
+a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: x-large;
+}
+/*IMAGENES */
+img.img-fluid,
+.img-circle {
+    border: 2px solid black;
+}
+/* MEDIAS QUERIES (DISEÑO RESPONSIVE ADAPTATIVO)*/
+@media (max-width: 600px) {
+
+    /* QUERIES PARA BODY*/
+    body {
+        background-color: white !important;
+        background-image: none !important;
+
+    }
+  /* QUERIES PARA IMÀGENES*/
+    .img-fluid {
+        width: 100%;
+    }
+    #logo {
+        width: 40%;
+    }
+}
+
+
+
+/* ESTILOS DROPDOWN */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: red !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .show {display:block;}
+  
+  #tabla{
+    border: 1px solid #000;
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 100%;
+    background-color: #3e8e41;
+  }
+  .imagen{
+width: 100%;
+  }
