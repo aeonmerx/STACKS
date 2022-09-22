@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--NO ES CORRECTO PONER UN CANAVS DENTRO D EUN PÁRRAFO-->
+ <!--LO HACEMOS POR NO MODIFICAR EL CSS Y CENTRAR EL CANVAS CON ESTE TRUCO-->
+    <p style="text-align: center;">
+        <canvas width="800px" height="800px"></canvas>
+    </p>
+    <script>
+        //PREPARACIONES DEL CANVAS
+    var pantalla = document.querySelectorAll('canvas');
+    var  lienzoUno = pantalla[0];
+     var pincel = lienzoUno.getContext("2d");
+     // INICIO DE LAS FUNCIONES DE DIBUJO
+    function dibujarBarraColores(a){
+        function dibujarCuadrado(x,y,color){
+        var pantalla = document.querySelectorAll('canvas');
+       var  lienzoUno = pantalla[0];
+        var pincel = lienzoUno.getContext("2d");
+        pincel.fillStyle = color ; //PROPIEDAD
+        pincel.fillRect(x,y,50,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+    dibujarCuadrado(a,50,"red")
+    dibujarCuadrado(a,100,"purple")
+    dibujarCuadrado(a,150,"yellow")
+    dibujarCuadrado(a,200,"green")
+    dibujarCuadrado(a,250,"orangered")
+    dibujarCuadrado(a,300,"blue")
+    dibujarCuadrado(a,350,"pink")
+}
+/*function dibujarRectangulo(x,y,color,altura){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,altura); 
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,altura);
+    }   */
+    function dibujarRectangulo(x,y,color){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,Math.round(Math.random()*500)); 
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,Math.round(Math.random()*500));
+    }   
+    dibujarBarraColores(50);
+    dibujarBarraColores(100);
+    dibujarBarraColores(150);
+    dibujarBarraColores(200);
+    dibujarBarraColores(250);
+    dibujarBarraColores(300);
+    dibujarBarraColores(350);
+    dibujarRectangulo(0,50,"yellow")
+    dibujarRectangulo(400,50,"blue")
+    dibujarRectangulo(0,600,"red")
+    </script>
+</body>
+</html>
