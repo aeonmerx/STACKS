@@ -1,0 +1,39 @@
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+    // Crear función dibujar rectángulo
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);    
+    }
+
+    
+    function dibujarBarra(x, y, serie, colores, texto) {
+        escribirTexto(x, y - 10, texto);
+        var sumaAltura = 0
+        // SE CREA UN FOR INICIALIZADO EN 0 QUE CORRA HASTA QUE I SEA IGUAL A EL LARGO DEL ARRAY Y SUME DE UNO CADA VEZ
+        // ENTONCES ALTURA VA A SER IGUAL PRIMERO A SERIE[0] LUEGO A SERIE[1] HASTA EL ÚLTIMO ELEMENTO
+         for (var i = 0; i < serie.length; i++) {
+            var altura = serie[i];
+            dibujarRectangulo(x, y + sumaAltura, 50, altura, colores[i]);
+            sumaAltura = sumaAltura + altura;
+        }
+    }
+    var colores = ["blue","green","yellow", "red","gray"];
+    var serie2009 = [6,47,41,3,3];
+    var serie2019 = [81,9,3,3,4];
+    dibujarBarra(50, 50, serie2009, colores, "2009");
+    dibujarBarra(150, 50, serie2019, colores, "2019");
+</script>
+</body>
