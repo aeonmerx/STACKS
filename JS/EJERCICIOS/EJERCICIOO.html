@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Figurar</title>
+</head>
+<body>
+    <canvas width="500px" height="500px"></canvas>
+    <script>
+function dibujarCuadradoVerde(x,y){
+    var pantalla = document.querySelectorAll('canvas');
+   var  lienzoUno = pantalla[0];
+    var pincel = lienzoUno.getContext("2d");
+    pincel.fillStyle = "green" ; //PROPIEDAD
+    pincel.fillRect(x,y,50,50);
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x,y,50,50);
+}
+function dibujarCuadradoRojo(x,y){
+    var pantalla = document.querySelectorAll('canvas');
+   var  lienzoUno = pantalla[0];
+    var pincel = lienzoUno.getContext("2d");
+    pincel.fillStyle = "red" ; //PROPIEDAD
+    pincel.fillRect(x,y,50,50);
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x,y,50,50);
+}
+function dibujarCuadradoNaranja(x,y){
+    var pantalla = document.querySelectorAll('canvas');
+   var  lienzoUno = pantalla[0];
+    var pincel = lienzoUno.getContext("2d");
+    pincel.fillStyle = "orange" ; //PROPIEDAD
+    pincel.fillRect(x,y,50,50);
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x,y,50,50);
+}
+dibujarCuadradoVerde(0,0);
+dibujarCuadradoRojo(50,50);
+dibujarCuadradoNaranja(100,100);
+dibujarCuadradoVerde(150,150);
+dibujarCuadradoRojo(200,200);
+dibujarCuadradoNaranja(250,250);
+dibujarCuadradoVerde(300,300);
+dibujarCuadradoRojo(350,350);
+dibujarCuadradoNaranja(400,400);
+dibujarCuadradoVerde(450,450);
+dibujarCuadradoRojo(500,500);
+dibujarCuadradoNaranja(550,550);
+    </script> 
+</body>
+</html>
